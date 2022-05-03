@@ -2,10 +2,28 @@ package com.revature.models;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "dice")
 public class Dice {
 
+	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "dice_id_seq")
+	@SequenceGenerator(allocationSize = 1, name = "dice_id_seq")
+	private int id;
+	@Column(name = "color")
 	private String color;
+	@Column(name = "cost")
 	private int cost;
+	@Column(name = "description")
 	private String Description;
 
 	public Dice() {
@@ -13,11 +31,20 @@ public class Dice {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Dice(String color, int cost, String description) {
+	public Dice(int id, String color, int cost, String description) {
 		super();
+		this.id = id;
 		this.color = color;
 		this.cost = cost;
 		Description = description;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getColor() {
@@ -46,7 +73,7 @@ public class Dice {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Description, color, cost);
+		return Objects.hash(Description, color, cost, id);
 	}
 
 	@Override
@@ -59,12 +86,12 @@ public class Dice {
 			return false;
 		Dice other = (Dice) obj;
 		return Objects.equals(Description, other.Description) && Objects.equals(color, other.color)
-				&& cost == other.cost;
+				&& cost == other.cost && id == other.id;
 	}
 
 	@Override
 	public String toString() {
-		return "Dice [color=" + color + ", cost=" + cost + ", Description=" + Description + "]";
+		return "Dice [id=" + id + ", color=" + color + ", cost=" + cost + ", Description=" + Description + "]";
 	}
 
 }
