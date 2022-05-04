@@ -9,7 +9,7 @@ import com.revature.models.Dice;
 @WebService
 public interface DiceService {
 
-	List<Dice> findAll();
-	void save(Dice dice);
-	void contactDndService(String message);
+	public List<Dice> findAll();
+	public void save(Dice dice);
+	public void contactDndService(String message);
 }

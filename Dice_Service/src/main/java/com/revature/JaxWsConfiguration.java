@@ -32,7 +32,7 @@ public class JaxWsConfiguration {
 
 	@Bean
 	public Endpoint endpoint(){
-		EndpointImpl endpoint = new EndpointImpl(springBus(), new DiceServiceImpl());
+		EndpointImpl endpoint = new EndpointImpl(springBus(), serviceImpl());
 		
 		endpoint.publish("/dice-service");
 		return endpoint;

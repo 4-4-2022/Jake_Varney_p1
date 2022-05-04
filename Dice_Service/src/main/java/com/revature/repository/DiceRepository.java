@@ -1,4 +1,4 @@
-package com.revature.DiceRepository;
+package com.revature.repository;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 import com.revature.models.Dice;
 
 @Repository("diceRepository")
-public interface DiceRepository extends JpaRepository<Dice, Integer>{
+public interface DiceRepository extends JpaRepository<Dice, String>{
 
-	List<Dice> findAll();
-	<S extends Dice> S save(S entity);
+	public List<Dice> findAll();
+	public <S extends Dice> S save(Dice dice);
 
 }

@@ -11,8 +11,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
 
-import com.revature.DiceRepository.DiceRepository;
 import com.revature.models.Dice;
+import com.revature.repository.DiceRepository;
 
 @WebService(endpointInterface = "com.revature.service.DiceService", name = "dice")
 public class DiceServiceImpl implements DiceService{
@@ -20,7 +20,15 @@ public class DiceServiceImpl implements DiceService{
 	@Autowired
 	private RestTemplate restTemplate;
 	
+	
 	private DiceRepository diceRepository;
+	
+	
+	public DiceServiceImpl() {}
+	
+	public DiceServiceImpl(DiceRepository diceRepository) {
+		this.diceRepository = diceRepository;
+	}
 	
 	@Autowired
 	public void setDiceRepository(DiceRepository diceRepository) {

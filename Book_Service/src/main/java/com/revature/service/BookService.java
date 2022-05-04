@@ -25,6 +25,15 @@ public class BookService {
 	public void save(Book book) {
 		this.bookRepository.save(book);
 	}
+
+	public void delete(Book book) {
+		this.bookRepository.delete(book);
+	}
+	
+	public List<Book> findAllByCost(int cost1, int cost2){
+		return this.bookRepository.findAllByCostBetween(cost1, cost2);
+		
+	}
 		
 
 
