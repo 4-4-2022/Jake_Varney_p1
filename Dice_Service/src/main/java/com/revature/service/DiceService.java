@@ -11,5 +11,6 @@ public interface DiceService {
 
 	public List<Dice> findAll();
 	public void save(Dice dice);
-	public void contactDndService(String message);
+	void delete(Dice dice);
+	public Dice findById(int id);
 }

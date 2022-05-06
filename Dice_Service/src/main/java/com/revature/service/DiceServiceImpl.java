@@ -6,10 +6,6 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.web.client.RestTemplate;
 
 import com.revature.models.Dice;
 import com.revature.repository.DiceRepository;
@@ -17,9 +13,6 @@ import com.revature.repository.DiceRepository;
 @WebService(endpointInterface = "com.revature.service.DiceService", name = "dice")
 public class DiceServiceImpl implements DiceService{
 
-	@Autowired
-	private RestTemplate restTemplate;
-	
 	
 	private DiceRepository diceRepository;
 	
@@ -45,23 +38,23 @@ public class DiceServiceImpl implements DiceService{
 	@Override
 	@WebMethod
 	public void save(Dice dice) {
-		this.diceRepository.save(dice);
-		
+		this.diceRepository.save(dice);	
 	}
 
 	@Override
 	@WebMethod
-	public void contactDndService(String message) {
-		final String URI = "/dnd-service?wsdl";
-		final String SOAP_MESSAGE = "";//copy message from SOAP UI here
-		
-		HttpHeaders header = new HttpHeaders();
-		header.setContentType(MediaType.APPLICATION_XML);
-		HttpEntity<String> request = new HttpEntity<>(SOAP_MESSAGE, header);
-		this.restTemplate.postForLocation(URI, request);
-	
-
+	public void delete(Dice dice) {
+		this.diceRepository.delete(dice);
 		
 	}
+
+	@Override
+	public Dice findById(int id) {
+		// TODO Auto-generated method stub
+		return this.diceRepository.findById(id);
+	}
+
+	
+
 
 }
