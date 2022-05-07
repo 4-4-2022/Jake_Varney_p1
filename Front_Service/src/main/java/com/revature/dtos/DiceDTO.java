@@ -1,37 +1,19 @@
-package com.revature.models;
+package com.revature.dtos;
 
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+public class DiceDTO {
 
-@Entity
-@Table(name = "dice")
-public class Dice {
-
-	@Id
-	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "dice_id_seq")
-	@SequenceGenerator(allocationSize = 1, name = "dice_id_seq")
 	private int id;
-	@Column(name = "color")
 	private String color;
-	@Column(name = "cost")
 	private int cost;
-	@Column(name = "description")
 	private String Description;
-	@Column(name = "quantity")
 	private int quant;
-	public Dice() {
+	public DiceDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Dice(int id, String color, int cost, String description, int quant) {
+	public DiceDTO(int id, String color, int cost, String description, int quant) {
 		super();
 		this.id = id;
 		this.color = color;
@@ -81,16 +63,16 @@ public class Dice {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Dice other = (Dice) obj;
+		DiceDTO other = (DiceDTO) obj;
 		return Objects.equals(Description, other.Description) && Objects.equals(color, other.color)
 				&& cost == other.cost && id == other.id && quant == other.quant;
 	}
 	@Override
 	public String toString() {
-		return "Dice [id=" + id + ", color=" + color + ", cost=" + cost + ", Description=" + Description + ", quant="
+		return "DiceDTO [id=" + id + ", color=" + color + ", cost=" + cost + ", Description=" + Description + ", quant="
 				+ quant + "]";
 	}
-
 	
-
+	
+	
 }

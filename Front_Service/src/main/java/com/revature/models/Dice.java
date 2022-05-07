@@ -2,30 +2,12 @@ package com.revature.models;
 
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "dice")
 public class Dice {
 
-	@Id
-	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "dice_id_seq")
-	@SequenceGenerator(allocationSize = 1, name = "dice_id_seq")
 	private int id;
-	@Column(name = "color")
 	private String color;
-	@Column(name = "cost")
 	private int cost;
-	@Column(name = "description")
 	private String Description;
-	@Column(name = "quantity")
 	private int quant;
 	public Dice() {
 		super();
@@ -90,7 +72,4 @@ public class Dice {
 		return "Dice [id=" + id + ", color=" + color + ", cost=" + cost + ", Description=" + Description + ", quant="
 				+ quant + "]";
 	}
-
-	
-
 }

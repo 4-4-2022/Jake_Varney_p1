@@ -12,5 +12,7 @@ public interface DiceRepository extends JpaRepository<Dice, String>{
 
 	public List<Dice> findAll();
 	public <S extends Dice> S save(Dice dice);
+	public void delete(Dice dice);
+	public Dice findById(int id);
 
 }

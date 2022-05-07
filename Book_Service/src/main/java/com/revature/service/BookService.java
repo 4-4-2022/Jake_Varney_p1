@@ -34,7 +34,23 @@ public class BookService {
 		return this.bookRepository.findAllByCostBetween(cost1, cost2);
 		
 	}
-		
-
+	
+	public List<Book> findAllByName(String name){
+		return this.bookRepository.findAllByName(name);
+	}
+	
+	public Book getBook(int id) {
+		List<Book> books = this.bookRepository.findAll();
+		for(Book book : books) {
+			if(book.getId() == id) {
+				return this.bookRepository.findById(id);
+			}
+		}
+		return null;
+	}
+	
+//	public Book convertToDisplay(Book book) {
+//		return new Book(book.getId(), book.getName(), book.getDescription(), book.getCost());
+//	}
 
 }

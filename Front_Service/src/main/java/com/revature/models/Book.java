@@ -2,30 +2,12 @@ package com.revature.models;
 
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "books")
 public class Book {
 
-	@Id
-	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "book_id_seq")
-	@SequenceGenerator(allocationSize = 1, name = "book_id_seq")
 	private int id;
-	@Column(name = "name")
 	private String name;
-	@Column(name = "description")
 	private String description;
-	@Column(name = "cost")
 	private int cost;
-	@Column(name = "quantity")
 	private int quant;
 	public Book() {
 		super();
@@ -92,7 +74,4 @@ public class Book {
 	}
 
 	
-
-	
-
 }

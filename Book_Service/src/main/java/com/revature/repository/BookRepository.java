@@ -14,4 +14,6 @@ public interface BookRepository extends JpaRepository<Book, String>{
 	public <S extends Book> S save(Book book);
 	public void delete(Book book);
 	public List<Book> findAllByCostBetween(int cost1, int cost2);
+	public List<Book> findAllByName(String name);
+	public Book findById(int id);
 }
