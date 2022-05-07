@@ -59,9 +59,11 @@ public class BookController {
 		return bookService.findAllByName(name);
 	}
 	
+	@CrossOrigin("http://localhost:8082")
 	@GetMapping(value = "/id/{id}")
 	public Book getBook(@PathVariable int id) {
 		return bookService.getBook(id);
 	}
+	
 	
 }

@@ -30,6 +30,11 @@ public class DiceController {
 		return this.diceService.save(dice);
 	}
 	
+	@PostMapping(value = "/dice-id/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_XML_VALUE)
+	public DiceDTO findById(@RequestBody int id) {
+		return this.diceService.findById(id);
+	}
+	
 	@DeleteMapping(value = "/dice-delete/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_XML_VALUE)
 	public void deleteDice(@PathVariable int id) {
 		DiceDTO dice = this.diceService.findById(id);

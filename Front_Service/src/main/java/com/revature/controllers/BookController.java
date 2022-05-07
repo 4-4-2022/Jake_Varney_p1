@@ -18,6 +18,7 @@ public class BookController {
 	@Autowired
 	private RestTemplate restTemplate;
 	
+	
 	@PostMapping("/book/newbook")
 	public String newBook(@RequestBody BookDTO book) {
 		ResponseEntity<String> response = restTemplate.postForEntity("http://localhost:8081/book/new", book, String.class);

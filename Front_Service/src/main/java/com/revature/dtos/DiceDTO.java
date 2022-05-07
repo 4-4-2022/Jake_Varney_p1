@@ -8,16 +8,18 @@ public class DiceDTO {
 	private String color;
 	private int cost;
 	private String Description;
+	private int quant;
 	public DiceDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public DiceDTO(int id, String color, int cost, String description) {
+	public DiceDTO(int id, String color, int cost, String description, int quant) {
 		super();
 		this.id = id;
 		this.color = color;
 		this.cost = cost;
 		Description = description;
+		this.quant = quant;
 	}
 	public int getId() {
 		return id;
@@ -43,9 +45,15 @@ public class DiceDTO {
 	public void setDescription(String description) {
 		Description = description;
 	}
+	public int getQuant() {
+		return quant;
+	}
+	public void setQuant(int quant) {
+		this.quant = quant;
+	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(Description, color, cost, id);
+		return Objects.hash(Description, color, cost, id, quant);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -57,12 +65,14 @@ public class DiceDTO {
 			return false;
 		DiceDTO other = (DiceDTO) obj;
 		return Objects.equals(Description, other.Description) && Objects.equals(color, other.color)
-				&& cost == other.cost && id == other.id;
+				&& cost == other.cost && id == other.id && quant == other.quant;
 	}
 	@Override
 	public String toString() {
-		return "DiceDTO [id=" + id + ", color=" + color + ", cost=" + cost + ", Description=" + Description + "]";
+		return "DiceDTO [id=" + id + ", color=" + color + ", cost=" + cost + ", Description=" + Description + ", quant="
+				+ quant + "]";
 	}
+	
 	
 	
 }
