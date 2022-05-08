@@ -27,7 +27,9 @@ public class DiceServiceImpl implements DiceService{
 	public void setDiceRepository(DiceRepository diceRepository) {
 		this.diceRepository = diceRepository;
 	}
-	
+	/**
+	 * This method returns all the Dice from the database and displays them for the user to view.
+	 */
 	@Override
 	@WebMethod
 	public List<Dice> findAll() {
@@ -35,12 +37,18 @@ public class DiceServiceImpl implements DiceService{
 		return this.diceRepository.findAll();
 	}
 
+	/**
+	 * This method saves a Dice to the database. Dice id is not needed since it is auto-generated.
+	 */
 	@Override
 	@WebMethod
 	public void save(Dice dice) {
 		this.diceRepository.save(dice);	
 	}
 
+	/**
+	 * This method deletes a dice from the database.
+	 */
 	@Override
 	@WebMethod
 	public void delete(Dice dice) {
@@ -48,6 +56,9 @@ public class DiceServiceImpl implements DiceService{
 		
 	}
 
+	/**
+	 * This method finds a dice by its id number.
+	 */
 	@Override
 	public Dice findById(int id) {
 		// TODO Auto-generated method stub

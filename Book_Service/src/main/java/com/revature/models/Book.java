@@ -19,13 +19,13 @@ public class Book {
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "book_id_seq")
 	@SequenceGenerator(allocationSize = 1, name = "book_id_seq")
 	private int id;
-	@Column(name = "name")
+	@Column(name = "name", nullable = false)
 	private String name;
-	@Column(name = "description")
+	@Column(name = "description", nullable = false)
 	private String description;
-	@Column(name = "cost")
+	@Column(name = "cost", nullable = false)
 	private int cost;
-	@Column(name = "quantity")
+	@Column(name = "quantity", nullable = false)
 	private int quant;
 	public Book() {
 		super();
@@ -61,13 +61,21 @@ public class Book {
 		return cost;
 	}
 	public void setCost(int cost) {
-		this.cost = cost;
+		if(cost<0) {
+			this.cost = 0;
+		}else {
+			this.cost = cost;
+		}
 	}
 	public int getQuant() {
 		return quant;
 	}
 	public void setQuant(int quant) {
-		this.quant = quant;
+		if(quant<0) {
+			this.quant = 0;
+		}else {
+			this.quant = quant;
+		}
 	}
 	@Override
 	public int hashCode() {

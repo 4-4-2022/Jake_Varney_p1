@@ -17,11 +17,17 @@ public class OrderService {
 	public void setOrderRepository(OrderRepository orderRepository) {
 		this.orderRepository = orderRepository;
 	}
-	
+	/**
+	 * This method returns all orders from the table for the user to view past orders.
+	 * @return
+	 */
 	public List<Order> findAll(){
 		return this.orderRepository.findAll();
 	}
-	
+	/**
+	 * This method saves an order to the system.
+	 * @param order
+	 */
 	public void save(Order order) {
 		this.orderRepository.save(order);
 	}
