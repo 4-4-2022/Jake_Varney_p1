@@ -37,7 +37,11 @@ public class Dice {
 		return cost;
 	}
 	public void setCost(int cost) {
-		this.cost = cost;
+		if(cost<0) {
+			this.cost = 0;
+		}else {
+			this.cost = cost;
+		}
 	}
 	public String getDescription() {
 		return Description;
@@ -49,7 +53,11 @@ public class Dice {
 		return quant;
 	}
 	public void setQuant(int quant) {
-		this.quant = quant;
+		if(quant<0) {
+			this.quant = 0;
+		}else {
+			this.quant = quant;
+		}
 	}
 	@Override
 	public int hashCode() {

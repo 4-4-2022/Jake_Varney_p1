@@ -49,25 +49,43 @@ public class Order {
 		return bookId;
 	}
 	public void setBookId(int bookId) {
-		this.bookId = bookId;
+		if(bookId<0) {
+			this.bookId = 0;
+		}else {
+			this.bookId = bookId;
+		}
 	}
 	public int getBookQuantity() {
 		return bookQuantity;
 	}
 	public void setBookQuantity(int bookQuantity) {
-		this.bookQuantity = bookQuantity;
+		if(bookQuantity<0) {
+			this.bookQuantity = 0;
+		}else {
+			this.bookQuantity = bookQuantity;
+		}
+		
 	}
 	public int getDiceId() {
 		return diceId;
 	}
 	public void setDiceId(int diceId) {
-		this.diceId = diceId;
+		if(diceId<0) {
+			this.diceId = 0;
+		}else {
+			this.diceId = diceId;
+		}
+		
 	}
 	public int getDiceQuantity() {
 		return diceQuantity;
 	}
 	public void setDiceQuantity(int diceQuantity) {
-		this.diceQuantity = diceQuantity;
+		if(diceQuantity<0) {
+			this.diceQuantity = 0;
+		}else {
+			this.diceQuantity = diceQuantity;
+		}	
 	}
 	@Override
 	public int hashCode() {

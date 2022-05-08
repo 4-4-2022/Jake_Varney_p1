@@ -49,6 +49,10 @@ public class BookService {
 		return null;
 	}
 	
+	public Book findById(int id) {
+		return this.bookRepository.findById(id);
+	}
+	
 //	public Book convertToDisplay(Book book) {
 //		return new Book(book.getId(), book.getName(), book.getDescription(), book.getCost());
 //	}
