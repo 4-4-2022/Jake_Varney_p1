@@ -1,1 +1,42 @@
 # Jake_Varney_p1
+
+## Project Description
+This project created a simple web API that would connect to a SOAP service and a RESTful service. This was done in order to create a RESTful user facing service that would sell both DnD books and Dice to a prospective customer. The initial idea for this was for a customer to call in to the service and place an order by their individual ID numbers. It is very similar to a service like Seventh Avenue with a mailed out catalog. 
+
+## Technologies Used
+- Spring Tool Suite 4.14.0
+- Spring Boot 2.6.7
+- Java 8
+- Spring Dev Tools
+- PostgreSQL
+- JaxWS 3.5.2
+- Amazon Web Services(AWS)
+- DBeaver
+- Advanced Rest Client(ARC)
+
+## Features
+
+## Getting Started
+
+## Usage
+Once you have downloaded the required code and programs, you will need to open the project in the Spring Tool Suite Workspace that you have designated. 
+
+You will then need to run all of the services in this order: 
+1. Dice_Service
+2. Book_Service
+3. Front_Service
+
+(The main one that you **need** to run first is the Dice Service, as the Front_Service has a connection on startup that relies on that service being awake.)
+
+Following this you will then need to open and run ARC. This software will allow you to test the endpoints of the program and make orders.
+
+From here, everything should be done through the Front_Service web address http://localhost:8082
+
+Then you will add a / to the end and add whatever end point you want, such as this POST request to the Book_Service:
+
+Another example would be looking at the available dice in the following GET request:
+
+Lastly, an example of making an order would look like this:
+
+(*note, you can only order one of each, a book and a dice set, in the current version, though you can order as many quantity as you want, up to the stock limit*)
+## License
