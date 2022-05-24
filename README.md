@@ -54,7 +54,11 @@ Following this you will then need to open and run ARC. This software will allow 
 From here, everything should be done through the Front_Service web address http://localhost:8082
 
 Then you will add a / to the end and add whatever end point you want, such as this POST request to the Book_Service:
-!https://github.com/4-4-2022/Jake_Varney_p1/blob/main/Images/ARC_Post.png
+
+![this is an image](https://github.com/4-4-2022/Jake_Varney_p1/blob/main/Images/ARC_Post.png)
+
 Another example would be looking at the available dice in the following GET request:
+
+![this is an image](https://github.com/4-4-2022/Jake_Varney_p1/blob/main/Images/ARC_Dice.png)
 
 
