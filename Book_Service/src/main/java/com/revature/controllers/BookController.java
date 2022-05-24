@@ -33,7 +33,7 @@ public class BookController {
 	 * This method returns all the books in the database for the user to view.
 	 * @return
 	 */
-	@GetMapping
+	@GetMapping("/all")
 	public ResponseEntity<List<Book>> findAll(){
 		ResponseEntity<List<Book>> httpResponse = new ResponseEntity<>(this.bookService.findAll(), HttpStatus.OK);
 		return httpResponse;
