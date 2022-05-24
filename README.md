@@ -15,6 +15,16 @@ This project created a simple web API that would connect to a SOAP service and a
 - Advanced Rest Client(ARC)
 
 ## Features
+- Create New DnD Books
+- Add your own Dice Sets
+- Order any of the books/dice
+- View all available items for sale
+
+### To do List
+- Implement findall() function from Book_Service into Front_Service
+- Add a Queue using ActiveMQ
+- Add a Topic using ActiveMQ
+
 
 ## Getting Started
 
