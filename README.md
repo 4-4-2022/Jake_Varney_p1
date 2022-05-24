@@ -30,11 +30,15 @@ This project created a simple web API that would connect to a SOAP service and a
 First you will need to download the following programs to get started:
 - Spring Tool Suite IDE (https://spring.io/tools)
 - Advanced Rest Client or Postman (https://install.advancedrestclient.com/install) or (https://www.postman.com/)
+- Git Bash (https://gitforwindows.org/)
 
 You can then use any Database option of your preference. I used AWS for hosting the database and used PostgreSQL myself.
 
-After this you will need to clone the git repository using git clone in your choice of bash Shell, I personally used git Bash.
-git clone 
+After this you will need to clone the git repository using git clone in git Bash.
+git clone https://github.com/4-4-2022/Jake_Varney_p1.git
+
+Following this, you just need to set the workspace in Spring Tool suite to whereve you cloned the repository to.
+
 ## Usage
 Once you have downloaded the required code and programs, you will need to open the project in the Spring Tool Suite Workspace that you have designated. 
 
@@ -53,7 +57,4 @@ Then you will add a / to the end and add whatever end point you want, such as th
 
 Another example would be looking at the available dice in the following GET request:
 
-Lastly, an example of making an order would look like this:
 
-(*note, you can only order one of each, a book and a dice set, in the current version, though you can order as many quantity as you want, up to the stock limit*)
-## License
