@@ -27,7 +27,14 @@ This project created a simple web API that would connect to a SOAP service and a
 
 
 ## Getting Started
+First you will need to download the following programs to get started:
+- Spring Tool Suite IDE (https://spring.io/tools)
+- Advanced Rest Client or Postman (https://install.advancedrestclient.com/install) or (https://www.postman.com/)
 
+You can then use any Database option of your preference. I used AWS for hosting the database and used PostgreSQL myself.
+
+After this you will need to clone the git repository using git clone in your choice of bash Shell, I personally used git Bash.
+git clone 
 ## Usage
 Once you have downloaded the required code and programs, you will need to open the project in the Spring Tool Suite Workspace that you have designated. 
 
